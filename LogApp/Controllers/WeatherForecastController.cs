@@ -30,7 +30,7 @@ namespace LogApp.Controllers
         {
             var rng = new Random();
 
-            _logger.LogError("log de erro para teste {0}", Summaries);
+            _logger.LogInformation("log de erro para teste {0}", Summaries);
                         
             var retorno = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -42,7 +42,7 @@ namespace LogApp.Controllers
 
             string logJSON = JsonConvert.SerializeObject(retorno);
 
-            _logger.LogError("payload inteiro {0}", logJSON);
+            _logger.LogInformation("payload inteiro {0}", logJSON);
 
             return retorno;
 

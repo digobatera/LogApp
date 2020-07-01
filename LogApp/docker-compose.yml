@@ -1,8 +1,10 @@
 version: "3.8"
 services:
-  es:
+  elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
-    container_name: es
+    container_name: elasticsearch
+    networks:
+      - default
     environment:
           - discovery.type=single-node
     ports:
@@ -11,21 +13,27 @@ services:
   kibana:
     container_name: kibana
     image: docker.elastic.co/kibana/kibana:7.8.0
+    networks:
+      - default
     ports:
       - 5601:5601
     links:
-      - es:elasticsearch
+      - elasticsearch:elasticsearch
   webapp:
     build: .
     image: br.com.itau.test/webapp
+    networks:
+      - default
     container_name: webapp
     ports:
       - 80:80
-  db:
+  dbmysql:
       image: mysql:5.7.30
       command: --default-authentication-plugin=mysql_native_password
       restart: always
       container_name: dbmysql
+      networks:
+        - default
       ports:
         - 3306:3306
       volumes:
@@ -37,7 +45,17 @@ services:
       image: adminer
       container_name: adminer
       restart: always
+      networks:
+        - default
       ports:
         - 8080:8080
+  metricbeat:
+    container_name: metricbeat
+    image: docker.elastic.co/beats/metricbeat:7.8.0
+    networks:
+      - default
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch
+      - KIBANA_HOST=kibana
 networks:
   default:
