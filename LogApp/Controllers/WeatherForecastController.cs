@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace LogApp.Controllers
 {
@@ -27,16 +28,24 @@ namespace LogApp.Controllers
 		[HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogError("log de erro para teste");
-
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+
+            _logger.LogError("log de erro para teste {0}", Summaries);
+                        
+            var retorno = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+
+            string logJSON = JsonConvert.SerializeObject(retorno);
+
+            _logger.LogError("payload inteiro {0}", logJSON);
+
+            return retorno;
+
         }
         
     }

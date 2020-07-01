@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    container_name: es
+    environment:
+          - discovery.type=single-node
+    ports:
+      - 9200:9200
+      - 9300:9300
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.8.0
+    ports:
+      - 5601:5601
+    links:
+      - es:elasticsearch
+  webapp:
+    build: .
+    image: br.com.itau.test/webapp
+    container_name: webapp
+    ports:
+      - 80:80
+  db:
+      image: mysql:5.7.30
+      command: --default-authentication-plugin=mysql_native_password
+      restart: always
+      container_name: dbmysql
+      ports:
+        - 3306:3306
+      volumes:
+        - ./data-dump:/docker-entrypoint-initdb.d
+      environment:
+        MYSQL_ROOT_PASSWORD: itau123
+        MYSQL_DATABASE: thecatapi
+  adminer:
+      image: adminer
+      container_name: adminer
+      restart: always
+      ports:
+        - 8080:8080
+networks:
+  default:

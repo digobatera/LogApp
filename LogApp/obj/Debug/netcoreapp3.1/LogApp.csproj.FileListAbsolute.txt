@@ -1,10 +1,5 @@
-D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\app\web.config
 D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\appsettings.json
-D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\app\appsettings.Development.json
-D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\app\appsettings.json
-D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\app\LogApp.deps.json
-D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\app\LogApp.runtimeconfig.json
 D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\LogApp.exe
 D:\projeto\roberto\LogApp\LogApp\bin\Debug\netcoreapp3.1\LogApp.deps.json
