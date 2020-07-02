@@ -51,7 +51,7 @@ namespace LogApp.Controllers
 
             if (categoria == null)
             {
-                _logger.LogError("ID digitador, não encontardo: {0}", id);
+                _logger.LogError("ID {0} digitado não entrado ", id);
                 return NotFound();
             }
 

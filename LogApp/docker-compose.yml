@@ -21,7 +21,7 @@ services:
       - elasticsearch:elasticsearch
   webapp:
     build: .
-    image: br.com.itau.test/webapp
+    image: itau/webapp
     networks:
       - default
     container_name: webapp
@@ -51,7 +51,12 @@ services:
         - 8080:8080
   metricbeat:
     container_name: metricbeat
+    user: root
     image: docker.elastic.co/beats/metricbeat:7.8.0
+    volumes:
+      - ./metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: ["-strict.perms=false"]
     networks:
       - default
     environment:

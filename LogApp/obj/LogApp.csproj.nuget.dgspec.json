@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projeto\\roberto\\LogApp\\LogApp\\LogApp.csproj": {}
+    "D:\\projeto\\roberto\\logapp\\logapp\\LogApp.csproj": {}
   },
   "projects": {
-    "D:\\projeto\\roberto\\LogApp\\LogApp\\LogApp.csproj": {
+    "D:\\projeto\\roberto\\logapp\\logapp\\LogApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projeto\\roberto\\LogApp\\LogApp\\LogApp.csproj",
+        "projectUniqueName": "D:\\projeto\\roberto\\logapp\\logapp\\LogApp.csproj",
         "projectName": "LogApp",
-        "projectPath": "D:\\projeto\\roberto\\LogApp\\LogApp\\LogApp.csproj",
+        "projectPath": "D:\\projeto\\roberto\\logapp\\logapp\\LogApp.csproj",
         "packagesPath": "C:\\Users\\digol\\.nuget\\packages\\",
-        "outputPath": "D:\\projeto\\roberto\\LogApp\\LogApp\\obj\\",
+        "outputPath": "D:\\projeto\\roberto\\logapp\\logapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

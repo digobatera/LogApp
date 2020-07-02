@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cy52R1wAcPDJSQke0KRGq4/5rWhyL69OSxXfoENS66iiptqlFgQZlvXwe08sgmi/VuhIQFFbGXm9U7han5gfBA==",
+  "dgSpecHash": "Kp6CtaXb16Vgt8837mIwUk0bjFLMkqw4t1d/T8zRnQYOekVXmbqG8N74beKKmsp0+XC+K6GpMSbkIDMbIgrFKA==",
   "success": true,
-  "projectFilePath": "D:\\projeto\\roberto\\LogApp\\LogApp\\LogApp.csproj",
+  "projectFilePath": "D:\\projeto\\roberto\\logapp\\logapp\\LogApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\digol\\.nuget\\packages\\elasticsearch.net\\7.0.0\\elasticsearch.net.7.0.0.nupkg.sha512",
     "C:\\Users\\digol\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.0.0\\microsoft.aspnetcore.hosting.abstractions.2.0.0.nupkg.sha512",
